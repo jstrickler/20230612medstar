@@ -11,5 +11,12 @@ print(a % b)   # modulus (remainder)
 
 x = 22
 x += 10  # Same as x = x + 10
-print(f"x: {x}")
+print(x)
+
+a = "123"
+b = 456
+
+# int() str() bool() float() 
+print(int(a) + b)
+print(a + str(b))
 

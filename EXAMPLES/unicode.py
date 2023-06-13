@@ -13,6 +13,8 @@ print("\u00a1\u0048\u006f\u006c\u0061\u0020\u004d\u0075\u006e\u0064\u006f\u0021"
 print("!\u0645\u0631\u062d\u0628\u0627\u0020\u0628\u0627\u0644\u0639\u0627\u0644\u0645") # arabic
 print()
 
+# if Unicode value > 0xFFFF
 data = ['\U0001F95A', '\U0001F414']  # answers the age-old question (at least for Python)
 print("unsorted:", data)
 print("sorted:", sorted(data))
+
