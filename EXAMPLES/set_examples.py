@@ -1,8 +1,13 @@
 
+set0 = set()
 set1 = {'red', 'blue', 'green', 'purple', 'green'}  # create literal set
-set2 = {'green', 'blue', 'yellow', 'orange'}
+set2 = {'green', 'blue', 'yellow', 'orange', 'blue', 'blue', 'green'}
+#  set3 = set(any-iterable-of-immutable-values)
 
 set1.add('taupe')  # add element to set (ignored if already in set)
+set2.add('purple')
+set2.add('purple')
+set1.add('chartreuse')
 
 print(set1)
 print(set2)

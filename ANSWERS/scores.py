@@ -7,7 +7,7 @@ with open("../DATA/testscores.dat") as scores_in:
         score = int(score)
         scores_by_student[name] = score
 
-for student, score in scores_by_student.items():
+def calculate_grade(score):
     if score > 94:
         grade = 'A'
     elif score > 88:
@@ -18,7 +18,10 @@ for student, score in scores_by_student.items():
         grade = 'D'
     else:
         grade = 'F'
+    return grade
 
+for student, score in scores_by_student.items():
+    grade = calculate_grade(score)
     print("{:20s} {} {}".format(student, score, grade))
 
 sum_of_scores = sum(scores_by_student.values())
