@@ -19,13 +19,15 @@ hello("Mom")
 hello("New York")
 hello("world")
 
-def multihello(greeting, *targets):
+def multihello(greeting: str, *targets: str) -> None:
     for target in targets:
         print(f"{greeting}, {target}")
 
 multihello("Hi", 'John')
 multihello("Hey", 'John', 'Paul', 'George', 'Ringo')
 multihello("Howdy")
+multihello(5, 99)
+
 
 def to_letters(s):
     return list(s)
@@ -48,7 +50,7 @@ def spam():
     print(f"animal: {animal}")
     
 spam()
-print(f"country: {country}")
+# print(f"country: {country}")
 
 
 

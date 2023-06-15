@@ -1,4 +1,4 @@
-from geometry import *
+from alpha.mathlib.geometry import *
 
 a1 = circle_area(8)
 a2 = rectangle_area(10, 12)

@@ -1,4 +1,4 @@
-from geometry import circle_area as c_area, rectangle_area as r_area, square_area as s_area
+from alpha.mathlib.geometry import circle_area as c_area, rectangle_area as r_area, square_area as s_area
 
 a1 = c_area(8)
 a2 = r_area(10, 12)

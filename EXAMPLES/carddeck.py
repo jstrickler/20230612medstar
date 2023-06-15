@@ -2,9 +2,9 @@
 Provide a CardDeck object and some utility methods
 """
 import random
-# from card_class import Card
+from card import Card
 # from card_named_tuple import Card
-from card_dataclass import Card
+# from card_dataclass import Card
 
 class CardDeck:
     """
@@ -44,7 +44,7 @@ class CardDeck:
         :return: One cards as a (rank, suit) tuple.
         """
         try:
-            return self._cards.pop(0) #
+            return self._cards.pop(0)
         except IndexError:
             print("Sorry, no more cards")
 
@@ -62,6 +62,12 @@ class CardDeck:
         Set/Retrieve the dealer.
 
         If invalid type is assigned, raises TypeError
+
+        Example:
+        deck = CardDeck("Esmeralda")
+        name = deck.dealer_name
+
+        deck.dealer_name = "Christopher"
 
         :return: Dealer as a string
         """
@@ -88,6 +94,9 @@ class CardDeck:
         """
         Return ranks as a list
 
+        ranks = CardDeck.get_ranks()
+        ranks = deck.get_ranks()
+
         :return:
         """
         return cls.RANKS
@@ -98,7 +107,7 @@ class CardDeck:
     def __str__(self):
         my_type = type(self)
         my_name = my_type.__name__
-        return f"{my_name}({self.dealer_name},{len(self)})"
+        return f"{my_name}-{self.dealer_name}-{len(self)}"
 
     def __repr__(self):
         my_type = type(self)
@@ -119,6 +128,9 @@ class CardDeck:
         )
 
 if __name__ == '__main__':
-    d = CardDeck("Mary")
-    d.shuffle()
+    d = CardDeck("Mary")  # create instance of CardDeck
+    print(d.cards)
+    d.shuffle()   # call CardDeck.shuffle(d) 
+    print(d.draw())
+    print(d.draw())
     print(d.cards)
